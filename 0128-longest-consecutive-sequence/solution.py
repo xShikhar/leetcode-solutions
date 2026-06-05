@@ -1,5 +1,5 @@
-class Solution(object):
-    def longestConsecutive(self, nums):
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
         num_set = set(nums)
         best = 0
         for n in num_set:
@@ -10,3 +10,4 @@ class Solution(object):
                 best = max(length , best)
         return best
 
+        
