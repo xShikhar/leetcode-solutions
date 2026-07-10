@@ -18,14 +18,14 @@ class Solution:
                 curr = nxt
 
         temp = head
-        prevNode = None          # fix 2
+        prevNode = None          
 
         while temp:
             kthnode = findNode(temp, k)
 
             if kthnode == None:
                 if prevNode:
-                    prevNode.next = temp   # fix 3 — reattach leftover
+                    prevNode.next = temp   
                 break
 
             nextNode = kthnode.next
@@ -41,4 +41,4 @@ class Solution:
             prevNode = temp
             temp = nextNode
 
-        return head              # fix 4
+        return head              
